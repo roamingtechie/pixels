@@ -26,7 +26,7 @@ the pixiest repo of them all [someone please find the gobstopper image and rende
 ## Tasks
 
 ### Justin
-- Get familiar with viewer.html, css/viewer.css, js/viewer.js
+- Get familiar with viewer.html, css/viewer.css, js/viewer.js and remove unrelated code in js/viewer.js
 - Change top of the panel to say 'WoW Amish Challenge'
 - Change the tab names and content to reflect https://spark723.wixsite.com/wowamishchallenge
 
@@ -37,5 +37,5 @@ the pixiest repo of them all [someone please find the gobstopper image and rende
 
 ### Alex
 - Get basic yolo helloworld stream overlay panel rendering on twitch
-- Populate panel with 3 clickable choices and attack click handlers to them
+- Populate panel with 3 clickable choices and attach click handlers to them
 - Improve design (mimic off Bits Voting Studio)
