@@ -3,19 +3,22 @@ the pixiest repo of them all [someone please find the gobstopper image and rende
 
 ## polling-extension structure
 
-/css -- contains all of the css files
-/fonts -- contains font-related files
-/js -- contains all of the js files
+**/css** -- contains all of the css files
 
-config.html - this is the page where the streamer can configure their extension (probably not where we'll let Criken live-update the polls)
+**/fonts** -- contains font-related files
 
-live_config.html - one option for where we can let Criken update the panel live. However, we may just want to build a separate webpage. We will ask what he's interested in
+**/js** -- contains all of the js files
 
-video_component.html -- This is where we will build the video overlay (for displaying live polls)
+**config.html** - this is the page where the streamer can configure their extension (probably not where we'll let Criken live-update the polls)
 
-viewer.html -- This is the panel where ths rules and statistics are displayed
+**live_config.html** - one option for where we can let Criken update the panel live. However, we may just want to build a separate webpage. We will ask what he's interested in
 
-To run this locally:
+**video_component.html** -- This is where we will build the video overlay (for displaying live polls)
+
+**viewer.html** -- This is the panel where ths rules and statistics are displayed
+
+## running the polling-extension locally
+
 1. Clone the repo
 2. cd into the project and run 'python -m SimpleHTTPServer'
 3. Navigate to localhost:8000/viewer.html to see a rendering of the panel (note -- this will be loaded into a fixed iFrame, so don't worry that it's extra wide. In general, we should design these panels to be responsive). When testing, just adjust your browser width to be less wide, and we can assume the Panel will be 500px in height.
