@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/config.css">
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Roboto, Arial, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                color: #ffffff;
+                background-color:#2f2f7a;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+
+        <!-- <div style="padding:1rem">
+            <img src="https://s3-us-west-2.amazonaws.com/pixelsgaming/assets/images/logo/logo_inverse.png" style="width:50px">
+        </div> -->
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-3">
+                    <label style="font-size:18px;" class="form-label"><b>Initial Setup (<span style="color:gold">important</span>)</b></label>
+                </div>
+                <b><div class="col-9" style="color:gold;">
+                    <div></div><br>
+                    <div>
+                        Step 1: Sign up with your Twitch @ <a style="text-decoration:underline" href="https://www.pixelsgaming.com/streamer" target="_blank">https://www.pixelsgaming.com/streamer</a>
+                    </div><br>
+                    <div>
+                        Step 2: Follow <a style="text-decoration:underline" href="https://www.twitch.tv/pixelsgamingbot" target="_blank">pixelsgamingbot</a> on Twitch <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="The bot uses whisper commands to give you the queue information. You must follow the bot to receive whispers."><i class="fa fa-question-circle"></i></span>
+                    </div><br>
+                    <div>
+                        Step 3 (optional): Watch getting started <a style="text-decoration:underline" href="https://youtu.be/MvGhCoaShnc" target="_blank">video</a>
+                    </div>
+                </div></b>
+            </div>
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label"><b>Bot Commands</b> <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Whisper these commands to pixelsgamingbot to operate the game queue."><i class="fa fa-question-circle"></i></span></label>
+                </div>
+                <div class="col-9">
+                    <div></div><br>
+                    <div>
+                        on <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Turns the game queue on."><i class="fa fa-question-circle"></i></span>
+                    </div><br>
+                    <div>
+                        off <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Turns the game queue off."><i class="fa fa-question-circle"></i></span>
+                    </div><br>
+                    <div>
+                        next <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Deletes the first person in the queue and whispers your their gamertag."><i class="fa fa-question-circle"></i></span>
+                    </div><br>
+                    <div>
+                        clear <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Removes everyone from the queue."><i class="fa fa-question-circle"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label"><b>Chat Commands</b></label>
+                </div>
+                <div class="col-9">
+                    <div></div><br>
+                    <div>
+                        !pixels <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Displays the 'Chat Message' text below to all viewers in the chat."><i class="fa fa-question-circle"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label"><b>Config</b></label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;Inactive Text</label>
+                </div>
+                <div class="col-9">
+                    <textarea name="inactiveText" id="inactiveText" rows="4" cols="50"></textarea> <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Text that displays on the panel when it is turned off. Accepts HTML tags."><i class="fa fa-question-circle"></i></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;Chat Message</label>
+                </div>
+                <div class="col-9">
+                    <textarea name="chatMessage" id="chatMessage" rows="4" cols="50"></textarea> <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Text that displays in chat when you type !pixels"><i class="fa fa-question-circle"></i></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;Joined Queue Message</label>
+                </div>
+                <div class="col-9">
+                    <textarea name="successfullyAddedToQueue" id="successfullyAddedToQueue" rows="4" cols="50"></textarea> <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Text that displays in the chat when a user joins the queue."><i class="fa fa-question-circle"></i></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;Already In Queue Message</label>
+                </div>
+                <div class="col-9">
+                    <textarea name="alreadyInQueueMessage" id="alreadyInQueueMessage" rows="4" cols="50"></textarea> <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Text that displays in the chat when a user tries to join the queue, but is already in the queue."><i class="fa fa-question-circle"></i></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;Panel Offline Message</label>
+                </div>
+                <div class="col-9">
+                    <textarea name="panelOfflineMessage" id="panelOfflineMessage" rows="4" cols="50"></textarea> <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Text that displays in the chat when a user tries to join the queue, but the queue is offline."><i class="fa fa-question-circle"></i></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;Subs Only Message</label>
+                </div>
+                <div class="col-9">
+                    <textarea name="subsOnlyMessage" id="subsOnlyMessage" rows="4" cols="50"></textarea> <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Text that displays in the chat when a user tries to join the queue when 'subscribers only' is enabled, but the user is not a subscriber."><i class="fa fa-question-circle"></i></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;Header Color</label>
+                </div>
+                <div class="col-9">
+                    <textarea name="headerCSS" id="headerCSS" rows="4" cols="50"></textarea> <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Background color of the top of the panel. Must be valid CSS."><i class="fa fa-question-circle"></i></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;Theme Color</label> 
+                </div>
+                <div class="col-9">
+                    <textarea name="themeColor" id="themeColor" rows="4" cols="50"></textarea> <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Color theme of the panel (info text and bottom tabs). Must be valid CSS."><i class="fa fa-question-circle"></i></span>
+                </div>
+            </div>
+            <!-- <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;Max Queue Length</label>
+                </div>
+                <div class="col-9">
+                    <div class="form-group">
+                        <label class="form-radio"><input name="max-items" type="radio" value="3"> <i class="form-icon"></i> 3</label> <label class="form-radio"><input name="max-items" type="radio" value="5"> <i class="form-icon"></i> 5</label> <label class="form-radio"><input name="max-items" type="radio" value="10"> <i class="form-icon"></i> 10</label> <label class="form-radio"><input name="max-items" type="radio" value="25"> <i class="form-icon"></i> 25</label> <label class="form-radio"><input name="max-items" type="radio" value="50"> <i class="form-icon"></i> 50</label> <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Maximum number of people that can join the queue."><i class="fa fa-question-circle"></i></span>
+                    </div>
+                </div>
+            </div> -->
+            <div class="form-group">
+                <div class="col-3">
+                    <label class="form-label">&nbsp;&nbsp;&nbsp;&nbsp;On / Off Switches</label>
+                </div>
+                <div class="col-9">
+                    <div>
+                        <label class="form-switch"><input name="subsOnly" id="subsOnly" type="checkbox"> <i class="form-icon"></i> Subs Only <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Only allow subscribers to join the queue."><i class="fa fa-question-circle"></i></span></label>
+                    </div>
+                    <div>
+                        <label class="form-switch"><input name="prioritizeSubs" id="prioritizeSubs" type="checkbox"> <i class="form-icon"></i> Prioritize Subs <span class="tooltip tooltip-wrap tooltip-right form-input-hint" data-tooltip="Subscribers will be prioritized in the queue."><i class="fa fa-question-circle"></i></span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-3"></div>
+                <div class="col-9">
+                    <button id="updateButton" class="btn btn-primary">Save Settings</button>
+                </div>
+            </div>
+            <input hidden name="queueConfigID" id="queueConfigID" />
+        </form>
+
+        <script src="js/config.js"></script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/viewer.css">
+    </head>
+    <body>
+        <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+        <div id="mainContainer">
+            <div id="topNav">
+                <label id="topNavLabel">Game With Me</label>
+            </div>
+            <div>
+                <div id="navImages" style="background: linear-gradient(rgba(200, 80, 142, 0.98), rgba(200, 70, 255, 0.85))">
+                    <div id="imageContainer">
+                        <div class="pixelface pixelface1"><img src="https://s3.us-west-2.amazonaws.com/pixelsgaming/assets/images/logo/logo.png"></div>
+                        <div class="pixelface pixelface2"><img src="https://s3.us-west-2.amazonaws.com/pixelsgaming/assets/images/logo/logo.png"></div>
+                        <div class="pixelface pixelface3"><img src="https://s3.us-west-2.amazonaws.com/pixelsgaming/assets/images/logo/logo.png"></div>
+                        <a href="https://www.pixelsgaming.com" target="_blank"><img class="mainface" src="https://s3.us-west-2.amazonaws.com/pixelsgaming/assets/images/logo/logo.png"></a>
+                    </div>
+                </div>
+                <div id="queueView" class="pixelpage">
+                    <table class="pixeltable">
+                        
+                    </table>
+                </div>
+
+                <div id="infoView" class="pixelpage" hidden style="color:white;">
+                    <p>
+                        What is Pixels Game Queue?<br><br>
+                        <span class="pixelinfo" >Pixels Game Queue a new extension that makes it easy for streamers to game with their viewers. It’s 100% FREE to use, customizable, and is fully integrated with Twitch.</span><br><br>
+                        How do I join the queue?<br><br>
+                        <span class="pixelinfo" >Type '!pixels add your_gamer_tag' (ie. !pixels add demonbae#8173) into Twitch chat. </span><br><br>
+                        How does the queue work?<br><br>
+                        <span class="pixelinfo" >The queue priority is customized by the streamer. Subscriber status and loyalty points could be factors in your place in line. Even if you join first, someone with higher priority could pass your place in line.</span><br><br>
+                        Email us at support@pixelsgaming.com for any support or feedback!
+                    </p>
+                </div>
+            </div>
+
+            <!-- <div class="pixelbutton"><a id="joinQueueButton" href="#">
+              Join Queue
+            </a></div> -->
+
+            <div id="bottomNav">
+                <input class="bottomNavInput" id="queueTab" name="period" type="radio" value="queue" checked> <label class="bottomNavLabel" for="queueTab">Queue</label> 
+                <input class="bottomNavInput" id="infoTab" name="period" type="radio" value="info"> <label class="label2 bottomNavLabel" for="infoTab">Info</label> 
+            </div>
+        </div>
+
+        <script src="js/viewer.js"></script>
+
+    </body>
+</html>
