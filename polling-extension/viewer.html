@@ -10,7 +10,7 @@
         <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
         <div id="mainContainer">
             <div id="topNav">
-                <label id="topNavLabel">Game With Me</label>
+                <label id="topNavLabel">WoW Amish Challenge</label>
             </div>
             <div>
                 <div id="navImages" style="background: linear-gradient(rgba(200, 80, 142, 0.98), rgba(200, 70, 255, 0.85))">
@@ -29,12 +29,12 @@
 
                 <div id="infoView" class="pixelpage" hidden style="color:white;">
                     <p>
-                        What is Pixels Game Queue?<br><br>
-                        <span class="pixelinfo" >Pixels Game Queue a new extension that makes it easy for streamers to game with their viewers. It’s 100% FREE to use, customizable, and is fully integrated with Twitch.</span><br><br>
-                        How do I join the queue?<br><br>
-                        <span class="pixelinfo" >Type '!pixels add your_gamer_tag' (ie. !pixels add demonbae#8173) into Twitch chat. </span><br><br>
-                        How does the queue work?<br><br>
-                        <span class="pixelinfo" >The queue priority is customized by the streamer. Subscriber status and loyalty points could be factors in your place in line. Even if you join first, someone with higher priority could pass your place in line.</span><br><br>
+                        What are the rules of the WoW Amish Challenge?<br><br>
+                        <span class="pixelinfo" >1) If you die, delete your character.<br>2) All gear must be crafted.<br>3) You must only rely on each other for professions and gathering.<br>4) The only non-crafted weapons that can be used must be dropped by bosses.</span><br><br>
+                        Death Count:<br><br>
+                        <span class="pixelinfo" > <!-- put death counter function here --> </span><br><br>
+                        Cumulative Obituary<br><br>
+                        <span class="pixelinfo" > <!-- I have no idea how to make this work lol --> </span><br><br>
                         Email us at support@pixelsgaming.com for any support or feedback!
                     </p>
                 </div>
@@ -45,7 +45,16 @@
             </a></div> -->
 
             <div id="bottomNav">
-                <input class="bottomNavInput" id="queueTab" name="period" type="radio" value="queue" checked> <label class="bottomNavLabel" for="queueTab">Queue</label> 
+              <input class="bottomNavInput" id="queueTab" name="period" type="radio" value="players" checked> <label class="bottomNavLabel" for="queueTab">Players</label>
+							
+							<input class="bottomNavInput" id="queueTab" name="period" type="radio" value="deaths" checked> <label class="bottomNavLabel" for="queueTab">Deaths</label>
+
+							<input class="bottomNavInput" id="queueTab" name="period" type="radio" value="contribute" checked> <label class="bottomNavLabel" for="queueTab">Contribute</label>
+
+			        <input class="bottomNavInput" id="queueTab" name="period" type="radio" value="streams" checked> <label class="bottomNavLabel" for="queueTab">Streams</label>
+
+							<input class="bottomNavInput" id="queueTab" name="period" type="radio" value="mervin" checked> <label class="bottomNavLabel" for="queueTab">Mervin The Mad</label>
+					
                 <input class="bottomNavInput" id="infoTab" name="period" type="radio" value="info"> <label class="label2 bottomNavLabel" for="infoTab">Info</label> 
             </div>
         </div>
